@@ -67,6 +67,10 @@ def home():
     return render_template('thefaceofgod.html')
 
 @app.route('/')
+def static_files(filename):
+return send_from_directory('/', filename)
+
+@app.route('/')
 def home():
     images = [
         '033C1A18-0CA3-4692-82A4-3D30236D7924.gif',

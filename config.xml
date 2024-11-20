@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget xmlns="http://www.w3.org/ns/widgets" id="com.example.vunderbar_app" version="1.0.0">
+    <name>VUNDERBAR</name>
+    <description>
+        Nostalgic 2000s website vibes!
+    </description>
+    <author email="bmonkhouselyrics@gmail.com">
+        Braidan Monkhouse
+    </author>
+    <content src="index.html" />
+    <preference name="SplashScreen" value="screen" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+        <icon src="res/android/icon.png" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <icon src="res/ios/#" />
+    </platform>
+</widget>
+

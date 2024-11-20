@@ -1,7 +1,8 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
+# More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
 
-name: Build and deploy JAR app to Azure Web App - VUNDERBAR
+name: Build and deploy Python app to Azure Web App - VUNDERBAR
 
 on:
   push:
@@ -16,20 +17,31 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Java version
-        uses: actions/setup-java@v4
+      - name: Set up Python version
+        uses: actions/setup-python@v5
         with:
-          java-version: 'java21'
-          distribution: 'microsoft'
+          python-version: '3.9'
 
-      - name: Build with Maven
-        run: mvn clean install
+      - name: Create and start virtual environment
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+      
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+        
+      # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
-      - name: Upload artifact for deployment job
+      - name: Zip artifact for deployment
+        run: zip release.zip ./* -r
+
+      - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v4
         with:
-          name: java-app
-          path: '${{ github.workspace }}/target/*.jar'
+          name: python-app
+          path: |
+            release.zip
+            !venv/
 
   deploy:
     runs-on: ubuntu-latest
@@ -39,25 +51,28 @@ jobs:
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
     permissions:
       id-token: write #This is required for requesting the JWT
-  
+
     steps:
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
         with:
-          name: java-app
+          name: python-app
+
+      - name: Unzip artifact for deployment
+        run: unzip release.zip
+
       
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_CB7EDF93C8154E82A9D597F3C4472DA0 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_BFC03173982D4C92A38762EA8ADE3657 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_4D162D450A834906ADE5E695316F6C65 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_B5D77D5070304BCA902CA58E0C3BCC44 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_99C86E65E2D14C3CB65F2E4949C436D1 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_AA4DD6A71C33476C8EA1F1E76172D020 }}
 
-      - name: Deploy to Azure Web App
-        id: deploy-to-webapp
+      - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
+        id: deploy-to-webapp
         with:
           app-name: 'VUNDERBAR'
           slot-name: 'Production'
-          package: '*.jar'
           

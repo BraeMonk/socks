@@ -102,7 +102,8 @@ def home():
         'OIP.jpg',
         'Png.png',
         'e02ce86bcfd6d1d6c2f775af-b3ec8c01_w200.gif',
-        'copy_CC503455-85B5-4062-9BE7-63934BA0A505.gif'
+        'copy_CC503455-85B5-4062-9BE7-63934BA0A505.gif',
+        'giphy.gif'
     ]
     return render_template('index.html', images=images)
 

@@ -1,0 +1,227 @@
+html,
+body{
+	margin:0;
+	padding:0;
+	display:flex;
+	flex-direction:column;
+}
+
+body{
+	color:black;
+	font-family:mono;
+	background-color:purple;
+	display:flex;
+	flex-direction:column;
+}
+
+main{
+	background-image:url("./FB0DA456-23ED-49EF-8363-204A9013D991.jpeg");
+	background-size:content;
+	background-position:center;
+	background-repeat:no-repeat;
+	flex:1;
+	display:flex;
+	flex-direction:column;
+	height:100%;
+}
+
+.h1v1{
+	text-align:center;
+	border:solid;
+	border-color:gold;
+	border-radius:5px;
+	background-image:url("./24E04E1C-1A19-4665-B29A-12E44CCF9B33.jpeg");
+	background-position:center;
+	background-repeat:no-repeat;
+	color:white;
+	text-shadow:3px 3px 5px black;
+}
+
+.yay{
+	color:cyan;
+	text-decoration:underline;
+}
+
+a{
+	text-decoration:none;
+}
+
+.header-title{
+	padding:20px;
+	text-align:center;
+	page-break-after:bottom;
+}
+
+.proceed{
+	text-align:center;
+	color:black;
+	text-shadow:3px 3px 5px white;
+	font-family:courier;
+}
+
+.content{
+	flex:1;
+	display:flex;
+	flex-direction:column;
+}
+
+footer{
+	border:hidden;
+	background-image:url("./CB1167C0-8770-42B5-838A-4660332471E1.gif");
+	background-size:content;
+	background-position:center;
+	background-repeat:no-repeat;
+	padding:0;
+	margin:0;
+	flex-shrink:0;
+	text-align:center;
+	justify-content:center;
+	position:relative;
+	bottom:0;
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	min-width:1000px;
+	left:-80%;
+	overflow:auto;
+}
+
+.a-friend{
+	border:solid;
+	border-color:white;
+	border-radius:5px;
+	background-image:url("./687A2F0F-39F1-4974-B7B9-D5855CC008C6.webp");
+	width:100%;
+	padding:20px;
+	color:white;
+	text-shadow:3px 3px 5px gold;
+}
+
+.friend-div{
+	display:flex;
+	flex-direction:column;
+	text-align:center;
+	padding:20px;
+	margin:0;
+	bottom:0;
+	background-image:url("./4EB7D54F-AD67-4A84-BE2D-E534EF2A8DDD.gif");
+	background-size:content;
+	background-position:center;
+	background-repeat:no-repeat;
+	height:100vh;
+	color:white;
+	font-family:courier;
+	text-shadow:3px 3px 5px gold;
+}
+
+.space{
+	background-color:black;
+	display:flex;
+	flex-direction:column;
+	padding:0;
+	margin:0;
+	background-image:url("./687A2F0F-39F1-4974-B7B9-D5855CC008C6.webp");
+	height:100vh;
+	width:100%;
+	overflow:auto;
+}
+
+.burn{
+	color:black;
+	font-family:cursive;
+	font-size:xx-large;
+	text-shadow:3px 3px 5px white;
+}
+
+.hellish-landscape{
+	background-image:url("./34D08A7A-CA13-42C9-AC0E-2AC45476853C.jpeg");
+	background-position:center;
+	background-size:content;
+	background-repeat:no-repeat;
+	background-color:orange;
+}
+
+.thank-heavens{
+	justify-content:center;
+	padding:20px;
+	align-items:center;
+	color:orange;
+	text-shadow:3px 3px 5px yellow;
+	text-align:center;
+	border:solid;
+	border-color:orange;
+	border-radius:5px;
+}
+
+.faceoff{
+	background-image:url("./6FF8A04E-0AB4-4197-ABBE-4D02CD2D7349.jpeg");
+	background-size:content;
+	background-position:center;
+	background-color:white;
+}
+
+.god{
+	border:hidden;
+	border-color:white;
+	border-radius:5px;
+	padding:20px;
+	background-size:cover;
+	background-position:center;
+	background-repeat:no-repeat;
+	width:80%;
+	height:80%;
+	margin:0 auto;
+}
+
+.the-rest{
+	color:gold;
+	text-shadow:3px 3px 5px black;
+	text-align:center;
+	font-family:courier;
+	font-size:xx-large;
+	justify-content:center;
+	display:flex;
+}
+
+.gretzky{
+	display:flex;
+	justify-content:fit-border;
+	flex-direction:column;
+	height:300px;
+	width:300px;
+	overflow:hidden;
+}
+
+.gods-face{
+	border:solid;
+	border-color:white;
+	border-radius:5px;
+	width:100%;
+	padding:20px;
+	background-image:url("./6FF8A04E-0AB4-4197-ABBE-4D02CD2D7349.jpeg");
+	background-position:top;
+	background-size:content;
+	background-repeat:no-repeat;
+	font-family:cursive;
+	font-size:xx-large;
+	text-align:center;
+	color:blue;
+	text-shadow:3px 3px 5px black;
+}
+
+.cp2{
+	border:solid black;
+	background-image:url("./7ED2ACAC-3BBD-4A19-B0C3-4399AD3ADF7D.gif");
+	background-position:center;
+	background-size:content;
+	padding:20px;
+	width:100%;
+	color:white;
+	text-shadow:3px 3px 5px black;
+	font-family: courier;
+	font-size:xx-large;
+	text-align:center;
+	display: flex;
+	flex:1;
+	overflow:auto;
+}

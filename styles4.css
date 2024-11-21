@@ -2,6 +2,7 @@
 	box-sizing:border-box;
 }
 
+html,
 body{
 	background-color:black;
 	align-items:center;
@@ -14,6 +15,7 @@ body{
 	background-size:cover;
 	background-position:center;
 	background-repeat:no-repeat;
+	justify-content:center;
 }
 
 a{

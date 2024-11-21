@@ -1,0 +1,38 @@
+*{
+	box-sizing:border-box;
+}
+
+body{
+	background-color:black;
+	align-items:center;
+	margin:0;
+	padding:0;
+	display:flex;
+	flex-direction:column;
+	overflow-x:hidden;
+	background-image:url("./8E926966-CDDD-4BF5-AB97-62DA9E2351B6.gif");
+	background-size:cover;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+
+a{
+	text-decoration:none;
+}
+
+.tinsel-town{
+	border:red solid;
+	border-radius:10px;
+	text-align:center;
+	background-image:url("./1FAF0F43-EC5F-438B-A944-B110709E02CC.jpeg");
+	background-position:top;
+	background-size:cover;
+	background-repeat:no-repeat;
+	color:red;
+	text-shadow: 3px 3px 5px red;
+	padding:20px;
+}
+
+.tt{
+	color:black;
+}

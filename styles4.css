@@ -61,6 +61,7 @@ h1{
 }
 
 .first-strike{
+	text-decoration:none;
 	text-align:center;
 	justify-content:center;
 	padding:20px;

@@ -22,7 +22,7 @@ body{
 
 main{
 	background-image:url("./FB0DA456-23ED-49EF-8363-204A9013D991.jpeg");
-	background-size:content;
+	background-size:cover;
 	background-position:center;
 	background-repeat:no-repeat;
 	flex:1;

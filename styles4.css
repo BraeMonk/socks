@@ -36,3 +36,10 @@ a{
 .tt{
 	color:black;
 }
+
+main{
+	background-image:url("./IMG_0797.gif");
+	background-size:cover;
+	background-position:center;
+	background-repeat:no-repeat;
+}

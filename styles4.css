@@ -80,6 +80,6 @@ h1{
 .strike1{
 	background-image:url("./IMG_0799.GIF");
 	background-position:center;
-	background-size:contain;
+	background-size:cover;
 	background-repeat:no-repeat;
 }

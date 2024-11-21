@@ -16,6 +16,8 @@ body{
 	background-position:center;
 	background-repeat:no-repeat;
 	justify-content:center;
+	font-family:typewriter;
+	font-size:xx-large;
 }
 
 a{
@@ -39,6 +41,11 @@ a{
 	color:black;
 }
 
+h1{
+	text-align:center;
+	justify-contents:center;
+}
+
 .main{
 	background-image:url("./IMG_0797.gif");
 	background-size:cover;
@@ -53,4 +60,6 @@ a{
 	text-align:center;
 	color:white;
 	text-shadow:3px 3px 5px black;
+	height:400px;
+	flex:1;
 }

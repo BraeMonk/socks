@@ -105,6 +105,8 @@ h1{
 	max-width:100%;
 	justify-content:center;
 	align-items:center;
+	font-family:mono;
+	font-size:xx-large;
 }
 
 .mug{

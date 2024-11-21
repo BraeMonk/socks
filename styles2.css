@@ -103,7 +103,7 @@ footer{
 
 .a-friend{
 	border:solid;
-	border-color:white;
+	border-color:black;
 	border-radius:5px;
 	background-image:url("./687A2F0F-39F1-4974-B7B9-D5855CC008C6.webp");
 	width:100%;
@@ -185,7 +185,7 @@ footer{
 
 .god{
 	border:hidden;
-	border-color:white;
+	border-color:black;
 	border-radius:5px;
 	padding:20px;
 	background-size:cover;

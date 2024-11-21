@@ -1,3 +1,7 @@
+*{
+	box-sizing:border-box;
+}
+
 html,
 body{
 	margin:0;
@@ -7,6 +11,7 @@ body{
 	width:100%;
 	justify-content:center;
 	align-items:center;
+	overflow:hidden;
 }
 
 body{
@@ -85,7 +90,7 @@ footer{
 	display:flex;
 	flex-direction:column;
 	width:100%;
-	min-width:1000px;
+	max-width:100%;
 	overflow:auto;
 }
 

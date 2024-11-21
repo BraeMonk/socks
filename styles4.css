@@ -92,3 +92,41 @@ h1{
 	justify-content:center;
 	align-items:center;
 }
+
+.mug2{
+	display:flex;
+	flex-direction:column;
+	background-image:url("./IMG_0804.jpeg");
+	background-position:center;
+	background-size:cover;
+	background-repeat:no-repeat;
+	height:100vh;
+	width:100%;
+	max-width:100%;
+	justify-content:center;
+	align-items:center;
+}
+
+.mug{
+	text-decoration:none;
+	text-align:center;
+	justify-content:center;
+	padding:20px;
+	border:solid;
+	border-color:white;
+	color:white;
+	text-shadow:3px 3px 5px black;
+	border-radius:5px;
+	height:100vh;
+	width:100%;
+	max-width:100%;
+	font-family:cursive;
+	font-size:xx-large;
+	display:flex;
+	align-items:center;
+	background-image:url("./IMG_0803.png");
+	background-position:center;
+	background-size:cover;
+	background-repeat:no-repeat;
+	
+}

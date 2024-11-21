@@ -75,6 +75,8 @@ h1{
 	max-width:100%;
 	font-family:cursive;
 	font-size:xx-large;
+	display:flex;
+	align-items:center;
 }
 
 .strike1{

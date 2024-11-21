@@ -1,3 +1,15 @@
+// Register the Service Worker at the bottom
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js')
+        .then((registration) => {
+            console.log('Service Worker registered with scope:', registration.scope);
+        }).catch((error) => {
+            console.log('Service Worker registration failed:', error);
+        });
+}
+
+// Add any additional JavaScript functionality below
+
 // global.js
 let globalData = {};
 
@@ -58,6 +70,14 @@ function playMedia(){
 
 playButton.addEventListener('click', playMedia);
 });
+
+// Your existing JavaScript code
+console.log("JavaScript file is loaded and running.");
+
+// Function to scroll to the footer
+function scrollToFooter() {
+    document.getElementById('footer').scrollIntoView({ behavior: 'smooth' });
+}
 
 const CACHE_NAME = 'socks-cache-v1';
 const urlsToCache = [

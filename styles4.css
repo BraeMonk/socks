@@ -42,4 +42,13 @@ a{
 	background-size:cover;
 	background-position:center;
 	background-repeat:no-repeat;
+	border:red solid;
+	border-radius:1px;
+	width:100%;
+	max-width:100%;
+	align-items:center;
+	justify-content:center;
+	text-align:center;
+	color:white;
+	text-shadow:3px 3px 5px black;
 }

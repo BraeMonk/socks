@@ -43,6 +43,7 @@ main{
 	color:white;
 	text-shadow:3px 3px 5px black;
 	width:100%;
+	align-items:center;
 }
 
 .yay{
@@ -92,6 +93,7 @@ footer{
 	width:100%;
 	max-width:100%;
 	overflow:auto;
+	align-items:center;
 }
 
 .a-friend{
@@ -103,6 +105,7 @@ footer{
 	padding:20px;
 	color:white;
 	text-shadow:3px 3px 5px gold;
+	align-items:center;
 }
 
 .friend-div{
@@ -120,6 +123,7 @@ footer{
 	color:white;
 	font-family:courier;
 	text-shadow:3px 3px 5px gold;
+	align-items:center;
 }
 
 .space{
@@ -139,6 +143,7 @@ footer{
 	font-family:cursive;
 	font-size:xx-large;
 	text-shadow:3px 3px 5px white;
+	align-items:center;
 }
 
 .hellish-landscape{
@@ -166,6 +171,8 @@ footer{
 	background-size:content;
 	background-position:center;
 	background-color:white;
+	align-items:center;
+	background-repeat:no-repeat;
 }
 
 .god{
@@ -179,6 +186,7 @@ footer{
 	width:80%;
 	height:80%;
 	margin:0 auto;
+	align-items:center;
 }
 
 .the-rest{
@@ -189,6 +197,7 @@ footer{
 	font-size:xx-large;
 	justify-content:center;
 	display:flex;
+	align-items:center;
 }
 
 .gretzky{
@@ -198,6 +207,7 @@ footer{
 	height:300px;
 	width:300px;
 	overflow:hidden;
+	align-items:center;
 }
 
 .gods-face{
@@ -213,6 +223,7 @@ footer{
 	font-family:cursive;
 	font-size:xx-large;
 	text-align:center;
+	align-items:center;
 	color:blue;
 	text-shadow:3px 3px 5px black;
 }
@@ -229,6 +240,7 @@ footer{
 	font-family: courier;
 	font-size:xx-large;
 	text-align:center;
+	align-items:center;
 	display: flex;
 	flex:1;
 	overflow:auto;

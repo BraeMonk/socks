@@ -63,3 +63,19 @@ h1{
 	height:400px;
 	flex:1;
 }
+
+.first-strike{
+	text-align:center;
+	justify-content:center;
+	padding:20px;
+	border:solid black;
+	color:black;
+	text-shadow:3px 3px 5px white;
+}
+
+.strike1{
+	background-image:url("./IMG_0798.gif");
+	background-position:center;
+	background-size:cover;
+	background-repeat:no-repeat;
+}

@@ -69,6 +69,8 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin:0;
+  padding:10px;
 }
 
 .first-strike {
@@ -185,18 +187,7 @@ h1 {
   align-items: center;
 }
 
-@media (max-width: 100%) {
-  /* Adjust font size and layout for smaller screens */
-  body {
-    font-size: large;
-  }
-
-  .tinsel-town, .main, .first-strike, .strike1, .mug, .mug2 {
+.tinsel-town, .main, .first-strike, .strike1, .mug, .mug2 {
     padding: 10px;
     font-size: large;
-  }
-
-  h1 {
-    font-size: large;
-  }
 }

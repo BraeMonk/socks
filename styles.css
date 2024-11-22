@@ -1,3 +1,12 @@
+.enter{
+	color:red;
+	border:solid;
+	border-color:red;
+	border-radius:5px;
+	font-family:courier;
+	font-size:xx-large;
+}
+
 .header-div{
 	display:flex;
 	flex-direction:column;

@@ -9,9 +9,10 @@
 	text-align:center;
 	align-items:center;
 	font-family:courier;
+	text-decoration:none;
 }
 
-.enter a{
+a{
 	text-decoration:none;
 }
 

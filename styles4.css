@@ -14,11 +14,14 @@ body{
 	justify-content:center;
 	font-family:typewriter;
 	font-size:xx-large;
-	height:100%;
+	height:100vh;
+	max-width:100%;
 }
 
 a{
 	text-decoration:none;
+	align-items:center;
+	justify-content:center;
 }
 
 .tinsel-town{

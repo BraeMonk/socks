@@ -9,6 +9,7 @@ body{
   overflow-x:hidden;
   display:flex;
   flex-direction:column;
+  background-color:black;
 }
   
 .khajiit1{
@@ -23,6 +24,8 @@ body{
   align-items:center;
   justify-content:center;
   max-width:100%;
+  height:100vh;
+  padding:20px;
 }
 
   .khajiit2{
@@ -37,5 +40,7 @@ body{
   align-items:center;
   justify-content:center;
   max-width:100%;
+  height:100vh;
+  padding:20px;
   }
   

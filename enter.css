@@ -17,6 +17,7 @@ body{
   padding:0;
   height:100vh;
   background-color:black;
+  color:white;
 }
 
 header{
@@ -28,5 +29,6 @@ header{
 	display:table;
 	align-items:center;
 	flex:1;
+	color:white;
 }
   

@@ -9,7 +9,6 @@
 	text-align:center;
 	align-items:center;
 	font-family:courier;
-	font-size: xx-large;
 }
 
 body{
@@ -21,7 +20,6 @@ body{
   background-color:black;
   color:white;
   font-family:courier;
-  font-size:xx-large;
 }
 
 header{
@@ -34,7 +32,11 @@ header{
 	align-items:center;
 	flex:1;
 	color:white;
+	font-family:courier
+}
+
+p{
 	font-family:courier;
-	font-size:xx-large;
+	font-size: medium;
 }
   

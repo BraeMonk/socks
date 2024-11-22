@@ -13,16 +13,14 @@ body{
 	overflow-x:hidden;
 	justify-content:center;
 	font-family:typewriter;
-	font-size:xx-large;&
+	font-size:xx-large;
 }
 
 a{
 	text-decoration:none;
-	color:white;
 	font-family: courier;
 	text-align:center;
 	justify-content:center;
-	text-shadow:3px 3px 5px slategray;
 }
 
 .tinsel-town{

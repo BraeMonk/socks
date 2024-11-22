@@ -2,6 +2,10 @@
 	box-sizing:border-box;
 }
 
+a{
+	text-decoration:none;
+}
+
 html,
 body{
 	background-color:black;
@@ -19,6 +23,7 @@ body{
 }
 
 .tinsel-town{
+	text-decoration:none;
 	border:red solid;
 	border-radius:10px;
 	text-align:center;
@@ -55,14 +60,12 @@ h1{
 	background-repeat:no-repeat;
 	border:red solid;
 	border-radius:1px;
-	width:100%;
 	max-width:100%;
 	align-items:center;
 	justify-content:center;
 	color:white;
 	text-shadow:3px 3px 5px black;
 	height:400px;
-	flex:1;
 }
 
 .first-strike{
@@ -76,7 +79,6 @@ h1{
 	text-shadow:3px 3px 5px black;
 	border-radius:5px;
 	height:100vh;
-	width:100%;
 	max-width:100%;
 	font-family:courier;
 	font-size:xx-large;
@@ -92,7 +94,6 @@ h1{
 	background-size:cover;
 	background-repeat:no-repeat;
 	height:100vh;
-	width:100%;
 	max-width:100%;
 	justify-content:center;
 	align-items:center;

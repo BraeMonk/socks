@@ -1,0 +1,20 @@
+.enter{
+	color:red;
+	border:solid;
+	border-color:red;
+	border-radius:5px;
+	font-family:courier;
+	font-size:xx-large;
+	justify-content:center;
+	text-align:center;
+	align-items:center;
+}
+
+body{
+  display:flex;
+  flex-direction:column;
+  margin:0;
+  padding:0;
+  height:100vh;
+}
+  

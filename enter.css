@@ -16,5 +16,17 @@ body{
   margin:0;
   padding:0;
   height:100vh;
+  background-color:black;
+}
+
+header{
+	background-image:url("./giphy.gif");
+	background-position:center;
+	background-size:cover;
+	padding:20px;
+	margin:0;
+	display:table;
+	align-items:center;
+	flex:1;
 }
   

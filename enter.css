@@ -11,6 +11,10 @@
 	font-family:courier;
 }
 
+.enter a{
+	text-decoration:none;
+}
+
 body{
   display:flex;
   flex-direction:column;

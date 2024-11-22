@@ -11,8 +11,16 @@ body{
   flex-direction:column;
   background-color:black;
 }
+
+a{
+  text-align:center;
+  text-decoration:none;
+  color:white;
+  text-shadow:3px 3px 5px black;
+}
   
 .khajiit1{
+  background-color:black;
   border:solid white;
   border-radius:5px;
   background-image:url("./IMG_0810.jpeg");
@@ -29,6 +37,7 @@ body{
 }
 
   .khajiit2{
+  background-color:black;
   border:solid white;
   border-radius:5px;
   background-image:url("./IMG_0809.jpeg");

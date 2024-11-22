@@ -37,7 +37,12 @@ header{
 	align-items:center;
 	flex:1;
 	color:white;
-	font-family:courier
+	font-family:courier;
+	text-align:center;
+}
+
+h1{
+	text-align:center;
 }
 
 p{

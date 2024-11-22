@@ -13,7 +13,7 @@ body{
 	overflow-x:hidden;
 	justify-content:center;
 	font-family:typewriter;
-	font-size:xx-large;
+	font-size:xx-large;&
 }
 
 a{
@@ -45,6 +45,7 @@ a{
 h1{
 	text-align:center;
 	justify-contents:center;
+	
 }
 
 .main{
@@ -144,4 +145,6 @@ h1{
 	font-size:xx-large;
 	color:white;
 	text-shadow:3px 3px 5px black;
+	text-align: center;
+	justify-content:center;
 }

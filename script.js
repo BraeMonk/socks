@@ -103,6 +103,7 @@ const urlsToCache = [
   '/styles2.css',
   '/styles3.css',
   '/enter.css',
+  'warmer.html',
   'home.html', 'IMG_O803.png', 'IMG_0804.jpeg', 'mug.html', 'IMG_0799.gif', 'underconstruction.html', 'IMG_0797.gif',
   '/033C1A18-0CA3-4692-82A4-3D30236D7924.gif',
   '/20C5D30F-8593-45FC-981F-957BA8977EB4.jpeg',

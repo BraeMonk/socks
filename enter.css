@@ -43,11 +43,11 @@ header{
 
 body{
 	text-align:center;
-	justify-content:center;
 }
 
 p{
 	font-family:courier;
 	font-size: medium;
+	text-align:left;
 }
   

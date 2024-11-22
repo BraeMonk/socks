@@ -33,6 +33,12 @@ body{
 
 .tt{
 	color:black;
+	text-decoration:none;
+	font-family:courier;
+	font-size:xx-large;
+	text-shadow:3px 3px 5px red;
+	justify-content:center;
+	align-items:center;
 }
 
 h1{
@@ -42,6 +48,7 @@ h1{
 }
 
 .main{
+	text-decoration:none;
 	background-image:url("./IMG_0797.gif");
 	background-size:cover;
 	background-position:center;

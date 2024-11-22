@@ -11,6 +11,10 @@
 	color:black;
 }
 
+h1{
+	margin:0;
+}
+
 html,
 body{
 	height:100vh;
@@ -239,6 +243,13 @@ bloodline{
 .ah-welcome{
 	text-align:center;
 	height:100%;
+}
+
+.yes{
+	text-align:center;
+	display:flex;
+	flex-direction:column;
+	justify-content:flex-end;
 }
 
 .ahh-welcome{

@@ -41,8 +41,9 @@ header{
 	text-align:center;
 }
 
-h1{
+body{
 	text-align:center;
+	justify-content:center;
 }
 
 p{

@@ -95,6 +95,7 @@ h1{
 	max-width:100%;
 	justify-content:center;
 	align-items:center;
+	padding:20px;
 }
 
 .mug2{
@@ -111,6 +112,7 @@ h1{
 	align-items:center;
 	font-family:mono;
 	font-size:xx-large;
+	padding:20px;
 }
 
 .mug{
@@ -159,5 +161,5 @@ h1{
 	font-family:courier;
 	color:white;
 	text-shadow:3px 3px 5px red;
-	
+	padding:20px;	
 }

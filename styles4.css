@@ -185,7 +185,7 @@ h1 {
   align-items: center;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 100%) {
   /* Adjust font size and layout for smaller screens */
   body {
     font-size: large;

@@ -266,6 +266,8 @@ bloodline{
 .khajiit-theonly{
 	text-align:center;
 	align-content:center;
+	text-deciration:none;
+	height: 100px;
 }
 
 .return-tk{

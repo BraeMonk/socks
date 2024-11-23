@@ -1,19 +1,10 @@
 const express = require('express');
-const session = require('express-session');
 
 // Initialize the Express app
 const app = express();
 
-// Middleware to parse incoming request bodies
-app.use(express.urlencoded({ extended: true }));
 // Serve static files (like home.html and signin.html)
 app.use(express.static('/'));
-// Session configuration for storing authentication state
-app.use(session({
-    secret: 'theMonk',  // Use a strong secret in production
-    resave: false,
-    saveUninitialized: true
-}));
 
 // Hardcoded password
 const correctPassword = 'drowssaP';

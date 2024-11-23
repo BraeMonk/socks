@@ -6,7 +6,8 @@ const app = express();
 
 // Middleware to parse incoming request bodies
 app.use(express.urlencoded({ extended: true }));
-
+// Serve static files (like home.html and signin.html)
+app.use(express.static('/'));
 // Session configuration for storing authentication state
 app.use(session({
     secret: 'theMonk',  // Use a strong secret in production
@@ -43,10 +44,10 @@ app.post('/password-page', (req, res) => {
     if (password === correctPassword) {
         // If correct, authenticate the user by setting session
         req.session.authenticated = true;
-        return res.redirect('./home.html');  // Redirect to show protected page
+        return res.redirect('/home.html');  // Redirect to show protected page
     } else {
         // If incorrect, display an error message
-        return res.send('<a href="./signin.html">Incorrect password. Please try again.</a>');
+        return res.send('<a href="/signin.html">Incorrect password. Please try again.</a>');
     }
 });
 

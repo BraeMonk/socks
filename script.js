@@ -1,64 +1,4 @@
-// Add any additional JavaScript functionality below
-let db;
 
-// Open the IndexedDB database
-const request = indexedDB.open('socks', 1);
-
-request.onerror = (event) => {
-    console.error('Error opening database:', event.target.error);
-};
-
-request.onsuccess = (event) => {
-    db = event.target.result;
-    console.log('Database opened successfully');
-};
-
-// Create object store and indexes if database version is upgraded
-request.onupgradeneeded = (event) => {
-    const db = event.target.result;
-    if (!db.objectStoreNames.contains('users')) {
-        const store = db.createObjectStore('users', { keyPath: 'id' });
-        store.createIndex('name', 'name', { unique: false });
-        store.createIndex('email', 'email', { unique: true });
-        console.log('Object store "users" created');
-    }
-};
-
-// Save user data
-function saveUserData(user) {
-    const transaction = db.transaction(['users'], 'readwrite');
-    const store = transaction.objectStore('users');
-    const request = store.put(user);
-    request.onsuccess = () => console.log('User data saved');
-    request.onerror = (event) => console.error('Error saving user:', event.target.error);
-}
-
-// Retrieve user by ID
-function getUserById(id) {
-    const transaction = db.transaction(['users'], 'readonly');
-    const store = transaction.objectStore('users');
-    const request = store.get(id);
-    request.onsuccess = (event) => console.log('User found:', event.target.result);
-    request.onerror = (event) => console.error('Error retrieving user:', event.target.error);
-}
-
-// Update user data
-function updateUserData(user) {
-    const transaction = db.transaction(['users'], 'readwrite');
-    const store = transaction.objectStore('users');
-    const request = store.put(user);
-    request.onsuccess = () => console.log('User data updated');
-    request.onerror = (event) => console.error('Error updating user:', event.target.error);
-}
-
-// Delete user by ID
-function deleteUserData(id) {
-    const transaction = db.transaction(['users'], 'readwrite');
-    const store = transaction.objectStore('users');
-    const request = store.delete(id);
-    request.onsuccess = () => console.log('User deleted');
-    request.onerror = (event) => console.error('Error deleting user:', event.target.error);
-}
 // global.js
 let globalData = {};
 
@@ -80,6 +20,102 @@ if ('serviceWorker' in navigator) {
     console.log('ServiceWorker registration failed: ', error);
   });
 }
+
+// app.js
+
+// Open the IndexedDB database (creating it if it doesn't exist)
+const request = indexedDB.open('socks', 1);
+
+let db;
+
+// Event handler for successful database opening
+request.onsuccess = function(event) {
+    db = event.target.result;
+    console.log('Database opened successfully');
+};
+
+// Event handler for database errors
+request.onerror = function(event) {
+    console.error('Error opening IndexedDB:', event.target.error);
+};
+
+// Event handler for database version upgrades (creates object store on first run)
+request.onupgradeneeded = function(event) {
+    const db = event.target.result;
+
+    // Create an object store for storing user data (e.g., current page)
+    if (!db.objectStoreNames.contains('users')) {
+        const store = db.createObjectStore('users', { keyPath: 'id' });
+        store.createIndex('username', 'username', { unique: true });
+        console.log('Object store "users" created');
+    }
+};
+
+// Function to check user credentials
+function authenticateUser(username, password) {
+    return usersDB.find(user => user.username === username && user.password === password);
+}
+
+// Function to save the player's current page in IndexedDB
+function savePlayerPage(userId, currentPage) {
+    const transaction = db.transaction(['users'], 'readwrite');
+    const store = transaction.objectStore('users');
+    const request = store.put({ id: userId, username: usersDB[userId - 1].username, currentPage });
+
+    request.onsuccess = function() {
+        console.log(`User's current page saved: ${currentPage}`);
+    };
+
+    request.onerror = function(event) {
+        console.error('Error saving user data:', event.target.error);
+    };
+}
+
+// Function to retrieve a user's saved page from IndexedDB
+function getPlayerPage(userId, callback) {
+    const transaction = db.transaction(['users'], 'readonly');
+    const store = transaction.objectStore('users');
+    const request = store.get(userId);
+
+    request.onsuccess = function() {
+        const user = request.result;
+        if (user) {
+            console.log(`Retrieved saved page for user: ${user.username}, Page: ${user.currentPage}`);
+            callback(user.currentPage);
+        } else {
+            console.log('No saved page for this user.');
+        }
+    };
+
+    request.onerror = function(event) {
+        console.error('Error retrieving user data:', event.target.error);
+    };
+}
+
+// Handle sign-in form submission
+document.getElementById('sign-in-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    const user = authenticateUser(username, password);
+    if (user) {
+        console.log('User authenticated:', user.username);
+
+        // After successful sign-in, save the user's current page in IndexedDB
+        savePlayerPage(user.id, '/home');  // For example, they start at the home page
+
+        // Optionally, retrieve the user's saved page when they sign in
+        getPlayerPage(user.id, function(savedPage) {
+            // Redirect to the saved page or default page if none is saved
+            window.location.href = savedPage || '/home';
+        });
+    } else {
+        console.error('Invalid username or password');
+        alert('Invalid credentials');
+    }
+});
 
 // scripts.js
 document.addEventListener('DOMContentLoaded', function() {

@@ -339,7 +339,6 @@ khajiit-a{
 	border-radius:5px;
 	padding:20px;
 	transition:left 1000ms ease-in-out;
-	z-index:1000;
 }
 
 .sliding-page.show{

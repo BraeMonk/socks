@@ -63,7 +63,7 @@ a{
   align-items:center;
   justify-content:center;
   max-width:100%;
-  height:100vh;
+  height:calc(100vh-40vh);
 }
 
   .khajiit2{
@@ -79,6 +79,6 @@ a{
   align-items:center;
   justify-content:center;
   max-width:100%;
-  height:100vh;
+  height:calc(100vh-40vh);
   }
   

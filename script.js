@@ -83,7 +83,7 @@ function getPlayerPage(userId, callback) {
             console.log(`Retrieved saved page for user: ${user.username}, Page: ${user.currentPage}`);
             callback(user.currentPage);
         } else {
-            console.log('No saved page for this user.');
+            console.log('./home.html');
         }
     };
 
@@ -103,13 +103,9 @@ document.getElementById('sign-in-form').addEventListener('submit', function(even
     if (user) {
         console.log('User authenticated:', user.username);
 
-        // After successful sign-in, save the user's current page in IndexedDB
-        savePlayerPage(user.id, '/home');  // For example, they start at the home page
-
-        // Optionally, retrieve the user's saved page when they sign in
-        getPlayerPage(user.id, function(savedPage) {
+        // Optionally, retrieve the user's saved page when they sign 
             // Redirect to the saved page or default page if none is saved
-            window.location.href = savedPage || '/home';
+            window.location.href = savedPage || './home.html';
         });
     } else {
         console.error('Invalid username or password');

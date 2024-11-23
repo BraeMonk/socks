@@ -386,4 +386,5 @@ khajiit-a{
 footer{
 	text-align:center;
 	padding:20px;
+	z-index:500;
 }

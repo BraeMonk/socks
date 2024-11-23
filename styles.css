@@ -337,13 +337,15 @@ khajiit-a{
 	transition:left 1000ms ease-in-out;
 }
 
-.sliding-page .show{
-	left: 0;
+.sliding-page .content{
 	max-width:100%;
 	height:100vh;
 	box-sizing:border-box;
 	padding:20px;
-	position:absolute;
+}
+
+.sliding-page .show{
+	left: 0;
 }
 
 .ret{

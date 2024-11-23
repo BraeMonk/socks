@@ -32,15 +32,21 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-
 // scripts.js
 document.addEventListener('DOMContentLoaded', function() {
+  // Select the necessary elements
   const openPageBtn = document.getElementById('openBtn');
   const slidingPage = document.getElementById('slidingPage');
   const closePageBtn = document.getElementById('closeWindowBtn');
 
+  // Ensure all elements are found before proceeding
+  if (!openPageBtn || !slidingPage || !closePageBtn) {
+    console.error('One or more elements not found in the DOM');
+    return;
+  }
+
   // Show the page when the button is clicked
-  openBtn.addEventListener('click', function() {
+  openPageBtn.addEventListener('click', function() {
     slidingPage.classList.add('show');
   });
 
@@ -51,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Optional: Close the page if the user clicks outside of it
   window.addEventListener('click', function(event) {
-    if (!event.target.closest('.sliding-page') && !event.target.closest('#openBtn')) {
+    if (!event.target.closest('#slidingPage') && !event.target.closest('#openBtn')) {
       slidingPage.classList.remove('show');
     }
   });

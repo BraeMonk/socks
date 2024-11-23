@@ -343,6 +343,7 @@ khajiit-a{
 
 .sliding-page.show{
 	left: 0;
+	max-width:100%;
 
 }
 

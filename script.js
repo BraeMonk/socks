@@ -1,13 +1,3 @@
-// Register the Service Worker at the bottom
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker.js')
-        .then((registration) => {
-            console.log('Service Worker registered with scope:', registration.scope);
-        }).catch((error) => {
-            console.log('Service Worker registration failed:', error);
-        });
-}
-
 // Add any additional JavaScript functionality below
 
 // global.js
@@ -102,7 +92,7 @@ const urlsToCache = [
   '/styles2.css',
   '/styles3.css',
   '/enter.css',
-  'appstore.png'
+  'appstore.png',
   'warmer.html',
   'khajiit2.html', 'khajiit1.html', 'khajiit.css', 'IMG_0809.jpeg', 'IMG_0810.jpeg',
   'home.html', 'IMG_O803.png', 'IMG_0804.jpeg', 'mug.html', 'IMG_0799.gif', 'underconstruction.html', 'IMG_0797.gif',

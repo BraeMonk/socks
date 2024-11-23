@@ -22,24 +22,6 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-// scripts.js
-document.addEventListener('DOMContentLoaded', function() {
-  // Select the necessary elements
-  const openPageBtn = document.getElementById('openBtn');
-  const slidingPage = document.getElementById('slidingPage');
-  const closePageBtn = document.getElementById('closeWindowBtn');
-
-  // Ensure all elements are found before proceeding
-  if (!openPageBtn || !slidingPage || !closePageBtn) {
-    console.error('One or more elements not found in the DOM');
-    return;
-  }
-
-  // Show the page when the button is clicked
-  openPageBtn.addEventListener('click', function() {
-    slidingPage.classList.add('show');
-  });
-
   // Hide the page when the close button is clicked
   closePageBtn.addEventListener('click', function() {
     slidingPage.classList.remove('show');

@@ -334,13 +334,13 @@ khajiit-a{
   background-position:center;
   background-size:cover;
   background-repeat:no-repeat;
+  z-index:1000;
+  transition:left 1000ms ease-in-out;
 }
 
 /* When the class 'show' is added, the page slides into view */
 .sliding-page.show {
-  left: 0; /* Bring the page into view */
-  z-index:1000;
-  translate:left 1000ms ease-in-out;	
+  left: 0; /* Bring the page into view */	
 }
 
 /* Style the close button (X) inside the sliding page */

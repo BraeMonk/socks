@@ -9,13 +9,13 @@ app.use(express.urlencoded({ extended: true }));
 
 // Middleware to handle sessions
 app.use(session({
-    secret: 'theMonk',  // Use a strong secret in production
+    secret: 'drowssaP',  // Use a strong secret in production
     resave: false,
     saveUninitialized: true
 }));
 
 // Serve static files from the 'public' directory
-app.use(express.static('public'));
+app.use(express.static('/'));
 
 // Hardcoded password
 const correctPassword = 'drowssaP';
@@ -28,14 +28,7 @@ app.get('/password-page', (req, res) => {
     }
 
     // If not authenticated, show the password input form
-    res.send(`
-        <h2>Enter Password Backwards</h2>
-        <form action="/password-page" method="POST">
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit">Submit</button>
-        </form>
-    `);
+    res.send('./signin.html);
 });
 
 // Handle the password submission (POST request)

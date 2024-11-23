@@ -53,25 +53,15 @@
 	<div id="slidingPage" class="sliding-page">
 	<span id="closeWindowBtn" class="ret">
 	&times;
+		<script>// Function to toggle the sliding page visibility
+function toggleSlidingPage() {
+  const slidingPage = document.querySelector('.sliding-page');
+  slidingPage.classList.toggle('show'); // Add or remove the 'show' class to slide in/out
+}
+
+// Example trigger (e.g., a button click to show the page)
+document.getElementById('openBtn').addEventListener('click', toggleSlidingPage);</script>
 	</span>
-		<script>
-			document.addEventListener('DOMContentLoaded', function() {
-  // Select the necessary elements
-  const openPageBtn = document.getElementById('openBtn');
-  const slidingPage = document.getElementById('slidingPage');
-  const closePageBtn = document.getElementById('closeWindowBtn');
-
-  // Ensure all elements are found before proceeding
-  if (!openPageBtn || !slidingPage || !closePageBtn) {
-    console.error('One or more elements not found in the DOM');
-    return;
-  }
-
-  // Show the page when the button is clicked
-  openPageBtn.addEventListener('click', function() {
-    slidingPage.classList.add('show');
-  });
-		</script>
 	</div>
 	
 </main>

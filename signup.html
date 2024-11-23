@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-In</title>
+    <style>
+        body { font-family: courier; }
+        .container { width: 300px; margin: 100px auto; background-color:black; }
+        input { width: 100%; padding: 10px; margin: 5px 0; }
+        button { width: 100%; padding: 10px; align-items:center; background-color: #000000; color: white; border: white solid 5px; cursor: pointer; }
+        button:hover { background-color: white; color:black; }
+    </style>
+    <link rel="manifest" src="./manifest.json">
+</head>
+  <body>
+    <div class="container">
+        <h2>Sign Up</h2>
+  <form id="signupForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" required><br><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" required><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" required><br><br>
+
+    <button type="submit">Sign Up</button>
+</form>
+    </div>
+  </body>
+</html>

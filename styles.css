@@ -227,6 +227,15 @@ bloodline{
 	text-align:center;
 }
 
+khajiit-a{
+  text-align:center;
+  text-decoration:none;
+  color:white;
+  text-shadow:3px 3px 5px black;
+  font-family:courier;
+}
+
+
 .khajiit-market{
 	background-image:url("./20C5D30F-8593-45FC-981F-957BA8977EB4.jpeg");
 	background-position:center;

@@ -1,5 +1,64 @@
 // Add any additional JavaScript functionality below
+let db;
 
+// Open the IndexedDB database
+const request = indexedDB.open('socks', 1);
+
+request.onerror = (event) => {
+    console.error('Error opening database:', event.target.error);
+};
+
+request.onsuccess = (event) => {
+    db = event.target.result;
+    console.log('Database opened successfully');
+};
+
+// Create object store and indexes if database version is upgraded
+request.onupgradeneeded = (event) => {
+    const db = event.target.result;
+    if (!db.objectStoreNames.contains('users')) {
+        const store = db.createObjectStore('users', { keyPath: 'id' });
+        store.createIndex('name', 'name', { unique: false });
+        store.createIndex('email', 'email', { unique: true });
+        console.log('Object store "users" created');
+    }
+};
+
+// Save user data
+function saveUserData(user) {
+    const transaction = db.transaction(['users'], 'readwrite');
+    const store = transaction.objectStore('users');
+    const request = store.put(user);
+    request.onsuccess = () => console.log('User data saved');
+    request.onerror = (event) => console.error('Error saving user:', event.target.error);
+}
+
+// Retrieve user by ID
+function getUserById(id) {
+    const transaction = db.transaction(['users'], 'readonly');
+    const store = transaction.objectStore('users');
+    const request = store.get(id);
+    request.onsuccess = (event) => console.log('User found:', event.target.result);
+    request.onerror = (event) => console.error('Error retrieving user:', event.target.error);
+}
+
+// Update user data
+function updateUserData(user) {
+    const transaction = db.transaction(['users'], 'readwrite');
+    const store = transaction.objectStore('users');
+    const request = store.put(user);
+    request.onsuccess = () => console.log('User data updated');
+    request.onerror = (event) => console.error('Error updating user:', event.target.error);
+}
+
+// Delete user by ID
+function deleteUserData(id) {
+    const transaction = db.transaction(['users'], 'readwrite');
+    const store = transaction.objectStore('users');
+    const request = store.delete(id);
+    request.onsuccess = () => console.log('User deleted');
+    request.onerror = (event) => console.error('Error deleting user:', event.target.error);
+}
 // global.js
 let globalData = {};
 

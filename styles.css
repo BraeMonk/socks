@@ -309,13 +309,6 @@ khajiit-a{
 	z-index:1000;
 }
 
-.messenger.show{
-	left:0;
-	height:100vh;
-	max-width:100%;
-	margin:0;
-}
-
 .deliveries{
 	width:100%;
 	background-color:black;
@@ -347,7 +340,10 @@ khajiit-a{
 .sliding-page.show{
 	left: 0;
 	max-width:100%;
-
+	height:100vh;
+	box-sizing:border-box;
+	padding:20px;
+	position:absolute;
 }
 
 .ret{
@@ -358,6 +354,7 @@ khajiit-a{
 	border:solid;
 	border-color:black;
 	padding:20px;
+	
 }
 
 .you-died{

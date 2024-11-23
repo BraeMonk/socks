@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const closePageBtn = document.getElementById('closeWindowBtn');
 
   // Show the page when the button is clicked
-  openPageBtn.addEventListener('click', function() {
+  openBtn.addEventListener('click', function() {
     slidingPage.classList.add('show');
   });
 

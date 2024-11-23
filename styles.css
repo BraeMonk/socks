@@ -357,6 +357,8 @@ khajiit-a{
 	border:solid;
 	border-color:black;
 	padding:5px;
+	max-width:100%;
+	height:100vh;
 }
 
 .you-died{

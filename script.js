@@ -46,9 +46,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// Example trigger (e.g., a button click to show the page)
-document.getElementById('openBtn').addEventListener('click', toggleSlidingPage);
-
 document.addEventListener('DOMContentLoaded', function(){
 const playButton = document.getElementById('playBtn');
 const audio = document.getElementById('pageAudio');

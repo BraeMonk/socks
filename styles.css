@@ -321,34 +321,34 @@ khajiit-a{
 	border-radius:5px;
 }
 
-.sliding-page{
-	height:100vh;
-	width:100vw;
-	position:fixed;
-	top:0;
-	left:-100%;
-	background-color:black;
-	transition:left 1000ms ease-in-out;
-	z-index:1000;
-	background-image:url("./69983E32-DC94-4113-A4EA-7D63211E78E7.jpeg");
-	background-position:center;
-	background-size:cover;
-	background-repeat:no-repeat;
+/* Ensure the sliding page is off-screen by default */
+.sliding-page {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px; /* Or any width you prefer */
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark transparent background */
+  transition: right 0.3s ease-in-out; /* Smooth transition */
+  background-image:url("./69983E32-DC94-4113-A4EA-7D63211E78E7.jpeg");
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
 }
 
-.sliding-page .show{
-	left: 0;
+/* When the class 'show' is added, the page slides into view */
+.sliding-page.show {
+  right: 0; /* Bring the page into view */
 }
 
-.ret{
-	position:absolute;
-	font-size:xx-large;
-	cursor:pointer;
-	color:black;
-	border:solid;
-	border-color:black;
-	padding:20px;
-	
+/* Style the close button (X) inside the sliding page */
+.ret {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
 }
 
 .you-died{

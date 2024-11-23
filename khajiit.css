@@ -28,6 +28,7 @@ header{
   text-shadow:3px 3px 5px gray;
   display:flex;
   flex-direction:column;
+  padding:0;
 }
 
 h1{

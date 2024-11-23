@@ -1,4 +1,6 @@
-
+*{
+	box-sizing:border-box;
+}
 
 .header-div{
 	display:flex;
@@ -332,13 +334,6 @@ khajiit-a{
 	background-position:center;
 	background-size:cover;
 	background-repeat:no-repeat;
-}
-
-.sliding-page .content{
-	width:100%;
-	height:100%;
-	box-sizing:border-box;
-	padding:20px;
 }
 
 .sliding-page .show{

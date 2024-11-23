@@ -320,7 +320,8 @@ khajiit-a{
 }
 
 .sliding-page{
-	height:100%;
+	height:100vh;
+	width:100vw;
 	max-width:100%;
 	background-image:url("./69983E32-DC94-4113-A4EA-7D63211E78E7.jpeg");
 	background-position:center;
@@ -335,10 +336,11 @@ khajiit-a{
 	border-radius:5px;
 	padding:20px;
 	transition:left 1000ms ease-in-out;
+	z-index:1000;
 }
 
 .sliding-page .content{
-	max-width:100%;
+	width:100%;
 	height:100vh;
 	box-sizing:border-box;
 	padding:20px;

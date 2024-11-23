@@ -115,6 +115,37 @@ document.getElementById('sign-in-form').addEventListener('submit', function(even
         console.error('Invalid username or password');
         alert('Invalid credentials');
     }
+document.getElementById('signupForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value; // Don't store plaintext passwords in real apps
+
+    // Open the IndexedDB database or create it
+    const request = indexedDB.open('myAppDB', 1);
+
+    request.onupgradeneeded = function(event) {
+        const db = event.target.result;
+        const store = db.createObjectStore('users', { keyPath: 'id', autoIncrement: true });
+        store.createIndex('username', 'username', { unique: true });
+        store.createIndex('email', 'email', { unique: true });
+    };
+
+    request.onsuccess = function(event) {
+        const db = event.target.result;
+        const transaction = db.transaction('users', 'readwrite');
+        const store = transaction.objectStore('users');
+
+        // Save the user data in IndexedDB
+        store.put({ username: username, email: email, password: password });
+
+        alert('User signed up successfully!');
+    };
+
+    request.onerror = function(event) {
+        console.error('Error signing up:', event.target.error);
+    };
 });
 
 // scripts.js

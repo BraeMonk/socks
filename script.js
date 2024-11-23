@@ -22,11 +22,29 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-// Function to toggle the sliding page visibility
-function toggleSlidingPage() {
-  const slidingPage = document.querySelector('.sliding-page');
-  slidingPage.classList.toggle('show'); // Add or remove the 'show' class to slide in/out
-}
+// scripts.js
+document.addEventListener('DOMContentLoaded', function() {
+  const openPageBtn = document.getElementById('openBtn');
+  const slidingPage = document.getElementById('slidingPage');
+  const closePageBtn = document.getElementById('closeWindowBtn');
+
+  // Show the page when the button is clicked
+  openPageBtn.addEventListener('click', function() {
+    slidingPage.classList.add('show');
+  });
+
+  // Hide the page when the close button is clicked
+  closePageBtn.addEventListener('click', function() {
+    slidingPage.classList.remove('show');
+  });
+
+  // Optional: Close the page if the user clicks outside of it
+  window.addEventListener('click', function(event) {
+    if (!event.target.closest('.sliding-page') && !event.target.closest('#openBtn')) {
+      slidingPage.classList.remove('show');
+    }
+  });
+});
 
 // Example trigger (e.g., a button click to show the page)
 document.getElementById('openBtn').addEventListener('click', toggleSlidingPage);

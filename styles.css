@@ -324,7 +324,7 @@ khajiit-a{
 }
 
 .sliding-page{
-	height:100vh;
+	height:100%;
 	max-width:100%;
 	background-image:url("./69983E32-DC94-4113-A4EA-7D63211E78E7.jpeg");
 	background-position:center;
@@ -332,7 +332,7 @@ khajiit-a{
 	background-repeat:no-repeat;
 	position:fixed;
 	top:0;
-	left:100%;
+	left:-100%;
 	background-color:black;
 	box-shadow:gray;
 	border:1px solid slategray;
@@ -343,7 +343,7 @@ khajiit-a{
 }
 
 .sliding-page.show{
-	transform:translateX(-100%);
+	left:0;
 
 }
 

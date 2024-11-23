@@ -334,6 +334,8 @@ khajiit-a{
   background-position:center;
   background-size:cover;
   background-repeat:no-repeat;
+  z-index:1000;
+  translate:left 1000ms ease-in-out;
 }
 
 /* When the class 'show' is added, the page slides into view */

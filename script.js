@@ -24,7 +24,7 @@ if ('serviceWorker' in navigator) {
 // app.js
 
 // Open the IndexedDB database (creating it if it doesn't exist)
-const request = indexedDB.open('socks', 1);
+const request = indexedDB.open('Socks', 1);
 
 let db;
 

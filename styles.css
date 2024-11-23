@@ -322,16 +322,10 @@ khajiit-a{
 .sliding-page{
 	height:100vh;
 	width:100vw;
-	max-width:100%;
 	position:fixed;
 	top:0;
 	left:-100%;
-	overflow-x:hidden;
 	background-color:black;
-	box-shadow:gray;
-	border:1px solid slategray;
-	border-radius:5px;
-	padding:20px;
 	transition:left 1000ms ease-in-out;
 	z-index:1000;
 }

@@ -13,6 +13,7 @@ body{
 }
 
 h1{
+  border:hidden 5px;
   text-decoration:none;
   text-align:center;
   justify-content:center;

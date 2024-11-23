@@ -54,13 +54,6 @@ document.addEventListener('DOMContentLoaded', function() {
   closePageBtn.addEventListener('click', function() {
     slidingPage.classList.remove('show');
   });
-
-  // Optional: Close the page if the user clicks outside of it
-  window.addEventListener('click', function(event) {
-    if (!event.target.closest('#slidingPage') && !event.target.closest('#openBtn')) {
-      slidingPage.classList.remove('show');
-    }
-  });
 });
 
 document.addEventListener('DOMContentLoaded', function(){

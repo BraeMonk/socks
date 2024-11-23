@@ -22,11 +22,14 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-  // Hide the page when the close button is clicked
-  closePageBtn.addEventListener('click', function() {
-    slidingPage.classList.remove('show');
-  });
-});
+// Function to toggle the sliding page visibility
+function toggleSlidingPage() {
+  const slidingPage = document.querySelector('.sliding-page');
+  slidingPage.classList.toggle('show'); // Add or remove the 'show' class to slide in/out
+}
+
+// Example trigger (e.g., a button click to show the page)
+document.getElementById('openBtn').addEventListener('click', toggleSlidingPage);
 
 document.addEventListener('DOMContentLoaded', function(){
 const playButton = document.getElementById('playBtn');
